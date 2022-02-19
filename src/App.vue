@@ -35,17 +35,20 @@
       <v-list dense nav>
         <v-list-item link>
           <v-list-item-icon>
-            <v-icon>mdi-lightbulb</v-icon>
+            <v-icon :color="color">mdi-lightbulb</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
+            <v-switch @click="toggleTheme(), drawer = false"></v-switch>
+          </v-list-item-content>
+          <!-- <v-list-item-content>
             <v-list-item-title>byt tema</v-list-item-title>
             <v-btn icon v-if="!$vuetify.theme.dark" @click="toggleTheme()">
-              <v-icon class="mr-1" color="blue-grey darken-4">mdi-lightbulb</v-icon>
+              <v-icon class="mr-1" color="white">mdi-lightbulb</v-icon>
             </v-btn>
             <v-btn icon v-if="$vuetify.theme.dark" @click="toggleTheme()">
               <v-icon color="yellow darken-3">mdi-lightbulb-outline</v-icon>
             </v-btn>
-          </v-list-item-content>
+          </v-list-item-content> -->
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -86,6 +89,7 @@
     >
       <v-icon>mdi-chevron-up</v-icon>
     </v-btn>
+    <Modal />
   </v-app>
 </template>
 
@@ -106,9 +110,26 @@ import Gallery from './components/Gallery.vue'
 import Timeline from './components/Timeline.vue'
 import Download from './components/Download.vue'
 import Footer from './components/Footer.vue'
+import Modal from './components/Modal.vue'
   export default {
     components: {
-      Jumbotron, Book, Weather, Events, Membership, Map, Contact, Timeline, Gallery, Sponsorship, Sponsors, Links, Download, Footer, Pricelist, Activities
+      Jumbotron,
+      Book,
+      Weather,
+      Events,
+      Membership,
+      Map,
+      Contact,
+      Timeline,
+      Gallery,
+      Sponsorship,
+      Sponsors,
+      Links,
+      Download,
+      Footer,
+      Pricelist,
+      Activities,
+      Modal
     },
     data() { 
       return {
@@ -128,7 +149,7 @@ import Footer from './components/Footer.vue'
           { title: 'Galleri', icon: 'mdi-view-gallery', link: '#gallery' },
           { title: 'Tidslinje', icon: 'mdi-timeline', link: '#timeline' },
           { title: 'Facebook', icon: 'mdi-facebook', link: 'https://www.facebook.com/Altunagarden/' },
-          { title: 'Ladda ner', icon: 'mdi-file-download' },
+          { title: 'Ladda ner', icon: 'mdi-file-download', link: '#download' },
         ],
       } 
     },
@@ -145,8 +166,11 @@ import Footer from './components/Footer.vue'
         this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
       }
     },
-    created: function () {
-      this.$vuetify.theme.dark
+    computed: {
+      color() {
+            let color = this.$vuetify.theme.dark ? '#FFFFFF' : '#757575';
+            return color;
+      }
     }
   }
 </script>

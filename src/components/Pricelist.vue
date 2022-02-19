@@ -2,7 +2,7 @@
   <v-container id="pricelist">
       <h3>Prislista</h3>
         <v-card
-            class="mx-auto"
+            class="mx-auto pb-3"
             tile
         >
             <v-list-item>
@@ -13,8 +13,8 @@
             <v-list-item>
                 <v-list-item-content>
                     <v-list-item-title>
-                        <v-badge color="primary" inline content="500:-/12 tim (350:- medlem)"></v-badge>
-                        <v-badge color="primary" inline content="300:-/6 tim (200:- medlem)"></v-badge>
+                        <v-badge color="#a55c1b" inline content="500:-/12 tim (350:- medlem)"></v-badge>
+                        <v-badge color="#a55c1b" inline content="300:-/6 tim (200:- medlem)"></v-badge>
                     </v-list-item-title>
                 </v-list-item-content>
             </v-list-item>
@@ -26,8 +26,8 @@
             <v-list-item>
                 <v-list-item-content>
                     <v-list-item-title>
-                        <v-badge color="primary" inline content="2000:-/24 tim (1500:- medlem)"></v-badge>
-                        <v-badge color="primary" inline content="1000:-/6 tim (700:- medlem)"></v-badge>
+                        <v-badge color="#a55c1b" inline content="2000:-/24 tim (1500:- medlem)"></v-badge>
+                        <v-badge color="#a55c1b" inline content="1000:-/6 tim (700:- medlem)"></v-badge>
                     </v-list-item-title>
                 </v-list-item-content>
             </v-list-item>
@@ -39,8 +39,8 @@
             <v-list-item>
                 <v-list-item-content>
                     <v-list-item-title>
-                        <v-badge color="primary" inline content="250:- (färre än 50 kuvert)"></v-badge>
-                        <v-badge color="primary" inline content="500:- (fler än 50 kuvert)"></v-badge>
+                        <v-badge color="#a55c1b" inline content="250:- (färre än 50 kuvert)"></v-badge>
+                        <v-badge color="#a55c1b" inline content="500:- (fler än 50 kuvert)"></v-badge>
                     </v-list-item-title>
                 </v-list-item-content>
             </v-list-item>
@@ -63,7 +63,7 @@
 
 <script>
 export default {
-
+    name: 'pricelist',
 }
 </script>
 

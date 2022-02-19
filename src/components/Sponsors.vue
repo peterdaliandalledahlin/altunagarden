@@ -2,8 +2,7 @@
   <v-container id="sponsors">
       <h3 class=" mb-3">Följande företag har sponsrat, eller på ett eller annat sätt bidragit till bevarandet av Altunagården!</h3>
       <v-card
-        max-width="500"
-        :class="{'mx-auto' : $vuetify.breakpoint.xs}"
+        class="mx-auto gradient"
     >
         <v-list>
         <v-list-item
@@ -16,7 +15,6 @@
             <v-list-item-icon>
             <v-icon
                 v-if="item.icon"
-                color="green darken-4"
             >
                 mdi-cash-100
             </v-icon>
@@ -37,6 +35,7 @@
 
 <script>
 export default {
+  name: 'sponsors',
     data () {
       return {
         items: [
@@ -61,5 +60,14 @@ export default {
 </script>
 
 <style>
-
+.gradient::before {
+  content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#000000,#a55c1b);
+	opacity: .6; 
+}
 </style>

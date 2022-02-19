@@ -85,7 +85,7 @@
             </template>
         </v-snackbar>
         <v-row class="mt-3">
-            <v-col v-for="contact in contact" :key="contact.id" cols="12" sm="4">
+            <v-col v-for="contact in contact" :key="contact.id" cols="12" sm="4" lg="3">
                 <v-card
                     class="mx-auto"
                     max-width="344"

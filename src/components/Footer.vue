@@ -6,17 +6,17 @@
         flat
         tile
         width="100%"
-        class="red lighten-1 text-center"
+        class="text-center gradient"
       >
         <v-card-text>
           <v-btn
-            v-for="icon in icons"
-            :key="icon"
+            v-for="item in icons"
+            :key="item.id"
             class="mx-4"
             icon
           >
-            <v-icon size="24px">
-              {{ icon }}
+            <v-icon size="24px" @click="$vuetify.goTo(item.link,  {duration: 500, easing: 'easeInOutCubic'})">
+              {{ item.icon }}
             </v-icon>
           </v-btn>
         </v-card-text>
@@ -29,13 +29,13 @@
         <v-card-text class="white--text">
             <v-chip
                 class="ma-2"
-                color="deep-purple accent-4"
+                color="white"
                 outlined
             >
                 <v-icon left>
                     mdi-wrench
                 </v-icon>
-                site made by peterdaliandalledahlin@gmail.com
+                made by peterdaliandalledahlin@gmail.com
             </v-chip>
         </v-card-text>
       </v-card>
@@ -47,10 +47,10 @@
 export default {
     data: () => ({
       icons: [
-        'mdi-home',
-        'mdi-email',
-        'mdi-calendar',
-        'mdi-delete',
+        {id: 1, link: '#home', icon: 'mdi-home'},
+        {id: 2, link: '#contact', icon: 'mdi-account-box'},
+        {id: 3, link: '#book', icon: 'mdi-calendar'},
+        {id: 4, link: '#events', icon: 'mdi-bell-ring'},
       ],
     }),
     computed: {
@@ -62,5 +62,15 @@ export default {
 <style scoped>
 .v-card__text.white--text {
     padding: 0 !important;
+}
+.gradient::before {
+  content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#000000,#a55c1b);
+	opacity: .6; 
 }
 </style>

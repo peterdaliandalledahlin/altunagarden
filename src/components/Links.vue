@@ -1,9 +1,8 @@
 <template>
-  <v-container>
+  <v-container id="links">
       <h3>Här nedan finns några länkar till företag och föreningar i bygden.</h3>
       <v-card
-        max-width="500"
-        :class="{'mx-auto' : $vuetify.breakpoint.xs}"
+        class="mx-auto gradient"
     >
         <v-list>
         <v-list-item
@@ -36,6 +35,7 @@
 
 <script>
 export default {
+  name: 'links',
     data () {
       return {
         items: [
@@ -49,6 +49,15 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.gradient::before {
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#000000,#a55c1b);
+	opacity: .6; 
+  }
 </style>

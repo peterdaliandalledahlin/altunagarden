@@ -3,7 +3,6 @@
         <v-banner two-line>
             <v-avatar
             slot="icon"
-            color="deep-purple accent-4"
             size="40"
             >
             <v-icon
@@ -19,7 +18,6 @@
             <template v-slot:actions>
             <v-btn
                 text
-                color="deep-purple accent-4"
                 @click="$vuetify.goTo('#contact', {duration: 500, easing: 'easeInOutCubic'})"
             >
                 Kontakt
