@@ -5,7 +5,7 @@
             ref="observer"
             v-slot="{ invalid }"
         >
-            <form>
+            <form class="mb-5">
                 <!-- <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_next" value="http://localhost:8085/"> -->
                 <!-- formsubmit.co -->

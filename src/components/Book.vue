@@ -21,7 +21,7 @@
             >
             mdi-email
             </v-icon>
-                Vill du hellre skicka en förfrågan via e-post så är adressen <a :class="{'card-link white--text' : $vuetify.theme.dark, 'black--text' : $vuetify.theme.light}" href="mailto:uthyrning.altunagarden@gmail.com?subject=Mail from website">uthyrning.altunagarden@gmail.com</a>
+                Vill du hellre skicka en förfrågan via e-post så är adressen <a :class="{'card-link white--text' : $vuetify.theme.dark, 'black--text' : $vuetify.theme.light}" href="mailto:lisa@ekehult.se">lisa@ekehult.se</a>
         </v-banner>
         <v-banner
             two-line

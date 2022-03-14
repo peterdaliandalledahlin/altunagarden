@@ -15,7 +15,11 @@
               ></span>
             </template>
             <div class="py-4">
-              <p v-if="!readMore[year.year]" v-show="year.content">{{year.content.substring(0, 20) + "..."}}</p>
+              <p v-if="!readMore[year.year] && $vuetify.breakpoint.xs" v-show="year.content">{{year.content.substring(0, 20) + "..."}}</p>
+              <p v-if="!readMore[year.year] && $vuetify.breakpoint.sm" v-show="year.content">{{year.content.substring(0, 100) + "..."}}</p>
+              <p v-if="!readMore[year.year] && $vuetify.breakpoint.md" v-show="year.content">{{year.content.substring(0, 200) + "..."}}</p>
+              <p v-if="!readMore[year.year] && $vuetify.breakpoint.lg" v-show="year.content">{{year.content.substring(0, 300) + "..."}}</p>
+              <p v-if="!readMore[year.year] && $vuetify.breakpoint.xl" v-show="year.content">{{year.content.substring(0, 400) + "..."}}</p>
               <p v-if="readMore[year.year]">{{year.content}}</p>
               <v-btn @click="showMore(year.year)" v-if="!readMore[year.year]" v-show="year.content" class="btn btn-primary">Läs mer</v-btn>
               <v-btn @click="showLess(year.year)" v-if="readMore[year.year]" class="btn btn-primary">Läs mindre</v-btn>

@@ -15,7 +15,7 @@
             class="mx-4"
             icon
           >
-            <v-icon size="24px" @click="$vuetify.goTo(item.link,  {duration: 500, easing: 'easeInOutCubic'})">
+            <v-icon size="24px" @click="$vuetify.goTo(icon.link,  {duration: 500, easing: 'easeInOutCubic'})">
               {{ item.icon }}
             </v-icon>
           </v-btn>

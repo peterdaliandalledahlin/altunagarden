@@ -31,14 +31,15 @@ export default {
   name: "download",
   data() {
     return {
-      //selectedItem: 0,
       items: [
-        { id: 1, text: 'Dagordning årsmöte 2022', icon: 'mdi-file-pdf-box', link: './dagordningarsmote2022.pdf' },
-        { id: 2, text: 'Protokoll 2021', icon: 'mdi-file-pdf-box', link: './protokoll2021.pdf' },
-        { id: 3, text: 'Dagordning årsmöte 2021', icon: 'mdi-file-pdf-box', link: './dagordningarsmote2021.pdf' },
-        { id: 4, text: 'Protokoll 2019', icon: 'mdi-file-pdf-box', link: './protokoll2019.pdf' },
-        { id: 5, text: 'Protokoll 2020', icon: 'mdi-file-pdf-box', link: './protokoll2020.pdf' },
-        { id: 6, text: 'Versamhetsberättelse 2020', icon: 'mdi-file-pdf-box', link: './verksamhetsberattelse2020.pdf' },
+        { id: 1, text: 'Kalendarium 2022', icon: 'mdi-file-pdf-box', link: './kalendarium2022.pdf' },
+        { id: 2, text: 'Verksamhetsberättelse 2022', icon: 'mdi-file-pdf-box', link: './verksamhetsberattelse2021.pdf' },
+        { id: 3, text: 'Dagordning årsmöte 2022', icon: 'mdi-file-pdf-box', link: './dagordningarsmote2022.pdf' },
+        { id: 4, text: 'Protokoll 2021', icon: 'mdi-file-pdf-box', link: './protokoll2021.pdf' },
+        { id: 5, text: 'Dagordning årsmöte 2021', icon: 'mdi-file-pdf-box', link: './dagordningarsmote2021.pdf' },
+        { id: 6, text: 'Protokoll 2019', icon: 'mdi-file-pdf-box', link: './protokoll2019.pdf' },
+        { id: 7, text: 'Protokoll 2020', icon: 'mdi-file-pdf-box', link: './protokoll2020.pdf' },
+        { id: 8, text: 'Verksamhetsberättelse 2020', icon: 'mdi-file-pdf-box', link: './verksamhetsberattelse2020.pdf' },
       ],
     }
   },

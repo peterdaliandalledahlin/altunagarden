@@ -15,7 +15,7 @@
         </v-btn>
       </template> -->
       <v-card>
-        <v-card-title class="text-h6">Stöd Föreningen Altunagården – bli medlem eller sponsor!</v-card-title>
+        <v-card-title class="text-h6 text-center">Stöd Föreningen<br /> Altunagården – bli medlem eller sponsor!</v-card-title>
         
         <v-divider class="my-3"></v-divider>
         

@@ -7,7 +7,8 @@
             <!-- <div class="weather_description" v-show="$vuetify.breakpoint.md">{{ weather.weather[0].description }}</div> -->
             <div class="weather_description">{{ description }}</div>
             <!-- <v-img :class="{'invert' : $vuetify.theme.dark}" max-height="25" max-width="25" :src="require(`@/assets/images/icons/${icon}.png`)" alt="weather icon"></v-img> -->
-            <v-img :class="{'invert' : $vuetify.theme.dark}" max-height="25" max-width="25" :src="`http://openweathermap.org/img/w/${icon}.png` " alt="weather icon"></v-img>
+            <!-- <v-img :class="{'invert' : $vuetify.theme.dark}" max-height="25" max-width="25" :src="`https://openweathermap.org/img/w/${icon}.png`" alt="weather icon"></v-img> -->
+            <v-img :class="{'invert' : $vuetify.theme.dark}" max-height="25" max-width="25" :src="icon" alt="weather icon"></v-img>
             <v-img :class="{'invert' : $vuetify.theme.dark}" max-height="25" max-width="25" :src="require('@/assets/images/sunrise.svg')" alt="soluppgång"></v-img>
             <div class="sunrise">{{ sunrise | formatDate }}</div>
             <v-img :class="{'invert' : $vuetify.theme.dark}" max-height="25" max-width="25" :src="require('@/assets/images/sunset.svg')" alt="solnedgång"></v-img>
@@ -22,7 +23,6 @@ export default {
     name: 'weather',
     data () {
         return {
-            //images: [],
             //weather: {},
             temp: '',
             description: '',
@@ -45,6 +45,64 @@ export default {
                 //console.log(res.data.weather[0].icon)
                 this.sunrise = res.data.sys.sunrise
                 this.sunset = res.data.sys.sunset
+                switch(this.icon) {
+                case '01d':
+                this.icon = './day.svg';
+                break;
+                case '01n':
+                this.icon = './night.svg';
+                break;
+                case '02d':
+                this.icon = './cloudy-day-1.svg';
+                break;
+                case '02n':
+                this.icon = './cloudy-night-1.svg';
+                break;
+                case '03d':
+                this.icon = './cloudy-day-3.svg';
+                break;
+                case '03n':
+                this.icon = './cloudy-night-3.svg';
+                break;
+                case '04d':
+                this.icon = './cloudy.svg';
+                break;
+                case '04n':
+                this.icon = './cloudy.svg';
+                break;
+                case '09d':
+                this.icon = './rainy-4.svg';
+                break;
+                case '09n':
+                this.icon = './rainy-4.svg';
+                break;
+                case '10d':
+                this.icon = './rainy-6.svg';
+                break;
+                case '10n':
+                this.icon = './rainy-6.svg';
+                break;
+                case '11d':
+                this.icon = './thunder.svg';
+                break;
+                case '11n':
+                this.icon = './thunder.svg';
+                break;
+                case '13d':
+                this.icon = './snowy-6.svg';
+                break;
+                case '13n':
+                this.icon = './snowy-6.svg';
+                break;
+                case '50d':
+                this.icon = './fog.svg';
+                break;
+                case '50n':
+                this.icon = './fog.svg';
+                break;
+                default:
+                this.icon = './weather.svg';
+            }
             }).catch(err => console.log(err))
         },  
         dateBuilder () {
@@ -57,125 +115,6 @@ export default {
             let year = d.getFullYear();
             return `${day} ${date} ${month} ${year}`;
         },
-
-        // defineIcon() {
-        //     if (this.icon = '01d') {
-        //         this.icon = this.images[0].pathShort
-        //     }
-        //     else if(this.icon = '01n') {
-        //         this.icon = this.images[1].pathShort.split('.').join("");
-        //     }
-        //     else if(this.icon = '02d') {
-        //         this.icon = this.images[2].pathShort.split('.').join("");
-        //     }
-        //     else if(this.icon = '02n') {
-        //         this.icon = this.images[3].pathShort.split('.').join("");
-        //     }
-        //     else if(this.icon = '03d') {
-        //         this.icon = this.images[4].pathShort.split('.').join("");
-        //     }
-        //     else if(this.icon = '03n') {
-        //         this.icon = this.images[5].pathShort.split('.').join("");
-        //     }
-        //     else if(this.icon = '04d') {
-        //         this.icon = this.images[6].pathShort.split('.').join("");
-        //     }
-        //     else if(this.icon = '04n') {
-        //         this.icon = this.images[7].pathShort.split('.').join("");
-        //     }
-        //     else if(this.icon = '09d') {
-        //         this.icon = this.images[8].pathShort.split('.').join("");
-        //     }
-        //     else if(this.icon = '09n') {
-        //         this.icon = this.images[9].pathShort.split('.').join("");
-        //     }
-        //     else if(this.icon = '10d') {
-        //         this.icon = this.images[10].pathShort.split('.').join("");
-        //     }
-        //     else if(this.icon = '10n') {
-        //         this.icon = this.images[11].pathShort.split('.').join("");
-        //     }
-        //     else if(this.icon = '11d') {
-        //         this.icon = this.images[12].pathShort.split('.').join("");
-        //     }
-        //     else if(this.icon = '11n') {
-        //         this.icon = this.images[13].pathShort.split('.').join("");
-        //     }
-        //     else if(this.icon = '13d') {
-        //         this.icon = this.images[14].pathShort.split('.').join("");
-        //     }
-        //     else if(this.icon = '13n') {
-        //         this.icon = this.images[15].pathShort.split('.').join("");
-        //     }
-        //     else if(this.icon = '50d') {
-        //         this.icon = this.images[16].pathShort.split('.').join("");
-        //     }
-        //     else if(this.icon = '50n') {
-        //         this.icon = this.images[17].pathShort.split('.').join("");
-        //     }
-        //     else {
-        //         this.icon = this.images[10].pathShort.split('.').join('')
-        //     }
-        //     // switch(this.icon) {
-        //     //     case '01d':
-        //     //     this.icon = this.images[0].pathLong;
-        //     //     break;
-        //     //     case '01n':
-        //     //     this.icon = this.images[1].pathLong;
-        //     //     break;
-        //     //     case '02d':
-        //     //     this.icon = this.images[2].pathLong;
-        //     //     break;
-        //     //     case '02n':
-        //     //     this.icon = this.images[3].pathLong;
-        //     //     break;
-        //     //     case '03d':
-        //     //     this.icon = this.images[4].pathLong;
-        //     //     break;
-        //     //     case '03n':
-        //     //     this.icon = this.images[5].pathLong;
-        //     //     break;
-        //     //     case '04d':
-        //     //     this.icon = this.images[6].pathLong;
-        //     //     break;
-        //     //     case '04n':
-        //     //     this.icon = this.images[7].pathLong;
-        //     //     break;
-        //     //     case '09d':
-        //     //     this.icon = this.images[8].pathLong;
-        //     //     break;
-        //     //     case '09n':
-        //     //     this.icon = this.images[9].pathLong;
-        //     //     break;
-        //     //     case '10d':
-        //     //     this.icon = this.images[10].pathLong;
-        //     //     break;
-        //     //     case '10n':
-        //     //     this.icon = this.images[11].pathLong;
-        //     //     break;
-        //     //     case '11d':
-        //     //     this.icon = this.images[12].pathLong;
-        //     //     break;
-        //     //     case '11n':
-        //     //     this.icon = this.images[13].pathLong;
-        //     //     break;
-        //     //     case '13d':
-        //     //     this.icon = this.images[14].pathLong;
-        //     //     break;
-        //     //     case '13n':
-        //     //     this.icon = this.images[15].pathLong;
-        //     //     break;
-        //     //     case '50d':
-        //     //     this.icon = this.images[16].pathLong;
-        //     //     break;
-        //     //     case '50n':
-        //     //     this.icon = this.images[17].pathLong;
-        //     //     break;
-        //     //     default:
-        //     //     this.icon = this.images[18].pathLong;
-        //     // }
-        //     //return this.icon
-        // },
     },
     mounted () {
         this.getCurrentWeather()

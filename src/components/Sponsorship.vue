@@ -3,14 +3,14 @@
         <h3 class="mb-5">Sponsorpaket Altunagården</h3>
         
                 <v-card
-                    class="mx-auto mb-2 gradient"
+                    class="mx-auto mb-2"
                 >
                     <v-card-text>
                     <div>Paket</div>
                     <p class="text-h4 text--primary">
                         Femhundringen
                     </p>
-                    <p>adjective</p>
+                    <p>el·ee·mos·y·nar·y</p>
                     <div class="text--primary">
                         relating to or dependent on charity; charitable.<br>
                         "an eleemosynary educational institution."
@@ -52,14 +52,14 @@
                     </v-expand-transition>
                 </v-card>
                 <v-card
-                    class="mx-auto mb-2 gradient"
+                    class="mx-auto mb-2"
                 >
                     <v-card-text>
                     <div>Paket</div>
                     <p class="text-h4 text--primary">
                         Brons 3000 kr
                     </p>
-                    <p>adjective</p>
+                    <p>el·ee·mos·y·nar·y</p>
                     <div class="text--primary">
                         relating to or dependent on charity; charitable.<br>
                         "an eleemosynary educational institution."
@@ -103,14 +103,14 @@
                     </v-expand-transition>
                 </v-card>
                 <v-card
-                    class="mx-auto mb-2 gradient"
+                    class="mx-auto mb-2"
                 >
                     <v-card-text>
                     <div>Paket</div>
                     <p class="text-h4 text--primary">
                         Silver 5000 kr
                     </p>
-                    <p>adjective</p>
+                    <p>el·ee·mos·y·nar·y</p>
                     <div class="text--primary">
                         relating to or dependent on charity; charitable.<br>
                         "an eleemosynary educational institution."
@@ -154,14 +154,14 @@
                     </v-expand-transition>
                 </v-card>
                 <v-card
-                    class="mx-auto gradient"
+                    class="mx-auto"
                 >
                     <v-card-text>
                     <div>Paket</div>
                     <p class="text-h4 text--primary">
                         Guld 7000 kr
                     </p>
-                    <p>adjective</p>
+                    <p>el·ee·mos·y·nar·y</p>
                     <div class="text--primary">
                         relating to or dependent on charity; charitable.<br>
                         "an eleemosynary educational institution."
@@ -234,4 +234,14 @@ export default {
   position: absolute;
   width: 100%;
 }
+/* .gradient::before {
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom right,#000000,#a55c1b);
+	opacity: .6; 
+  } */
 </style>
