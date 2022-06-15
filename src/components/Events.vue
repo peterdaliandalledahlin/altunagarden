@@ -8,7 +8,7 @@
                         <v-layout column>
                             <v-flex class="mb-2 text-h6">{{ event.title.rendered }}</v-flex>
                             <v-flex class="mb-2 text-caption">Upplagd: {{ event.date.slice(0,event.date.length-9) }}</v-flex>
-                            <v-flex class="text-body-1">{{ event.content.rendered | stripHTML }}</v-flex>
+                            <v-flex class="text-body-1" v-html="event.content.rendered"></v-flex>
                         </v-layout>
                     </v-container>
                 </v-card>  
@@ -30,7 +30,7 @@ export default {
         getEvents (e) {
             axios.get('https://altunagarden.se/wordpress/wp-json/wp/v2/posts')
             .then((res) => {
-                //console.log(res.data)
+                console.log(res.data)
                 this.events = res.data
             }).catch(err => console.log(err))
         },  
@@ -41,6 +41,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.flex.text-body-1 >>> a {
+    color: rgb(165, 92, 27);
+}
 </style>

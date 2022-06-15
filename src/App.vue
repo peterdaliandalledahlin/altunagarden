@@ -123,8 +123,8 @@ import Calendar from './components/Calendar.vue'
   export default {
     components: {
       Jumbotron,
-      Book,
       Weather,
+      Book,
       Events,
       Membership,
       Map,
