@@ -10,10 +10,9 @@
                     <p class="text-h4 text--primary">
                         Femhundringen
                     </p>
-                    <p>el·ee·mos·y·nar·y</p>
+                    <p>s·p·o·n·s·o·r</p>
                     <div class="text--primary">
-                        relating to or dependent on charity; charitable.<br>
-                        "an eleemosynary educational institution."
+                        altunagården behöver din hjälp
                     </div>
                     </v-card-text>
                     <v-card-actions>
@@ -45,7 +44,7 @@
                             color="#9A8578"
                             @click="revealFemhundringen = false"
                         >
-                            Close
+                            Stäng
                         </v-btn>
                         </v-card-actions>
                     </v-card>
@@ -59,10 +58,9 @@
                     <p class="text-h4 text--primary">
                         Brons 3000 kr
                     </p>
-                    <p>el·ee·mos·y·nar·y</p>
+                    <p>s·p·o·n·s·o·r</p>
                     <div class="text--primary">
-                        relating to or dependent on charity; charitable.<br>
-                        "an eleemosynary educational institution."
+                        altunagården behöver din hjälp
                     </div>
                     </v-card-text>
                     <v-card-actions>
@@ -96,7 +94,7 @@
                             color="#9A8578"
                             @click="revealBronse = false"
                         >
-                            Close
+                            Stäng
                         </v-btn>
                         </v-card-actions>
                     </v-card>
@@ -110,10 +108,9 @@
                     <p class="text-h4 text--primary">
                         Silver 5000 kr
                     </p>
-                    <p>el·ee·mos·y·nar·y</p>
+                    <p>s·p·o·n·s·o·r</p>
                     <div class="text--primary">
-                        relating to or dependent on charity; charitable.<br>
-                        "an eleemosynary educational institution."
+                        altunagården behöver din hjälp
                     </div>
                     </v-card-text>
                     <v-card-actions>
@@ -147,7 +144,7 @@
                             color="#9A8578"
                             @click="revealSilver = false"
                         >
-                            Close
+                            Stäng
                         </v-btn>
                         </v-card-actions>
                     </v-card>
@@ -161,10 +158,9 @@
                     <p class="text-h4 text--primary">
                         Guld 7000 kr
                     </p>
-                    <p>el·ee·mos·y·nar·y</p>
+                    <p>s·p·o·n·s·o·r</p>
                     <div class="text--primary">
-                        relating to or dependent on charity; charitable.<br>
-                        "an eleemosynary educational institution."
+                        altunagården behöver din hjälp
                     </div>
                     </v-card-text>
                     <v-card-actions>
