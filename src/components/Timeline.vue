@@ -39,17 +39,17 @@ export default {
               {
                 color: '#a55c1b',
                 year: '2022',
-                content: 'Uppdatering av webbsidan.'
+                content: 'Utställning med foton John Alinder. Pubkvällar. Uppdatering av webbsidan, ny layout.'
                 },
               {
                 color: '#a55c1b',
                 year: '2021',
-                content: 'Ny webbsida presenteras.'
+                content: 'Luciatåg. Ny webbsida presenteras. Pubkvällar'
                 },
               {
                 color: '#a55c1b',
                 year: '2020',
-                content: 'Dalkarlsvandrarna (inställt p.g.a. covid-19). Nytt avlopp grävs 2019-2020. Nytt värmesystem installeras. Luft/vattenvärmepump.'
+                content: 'Luciatåg genom Fröslunda by. Dalkarlsvandrarna (inställt p.g.a. covid-19). Nytt avlopp grävs 2019-2020. Nytt värmesystem installeras. Luft/vattenvärmepump.'
                 },
               {
                 color: '#a55c1b',

@@ -30,7 +30,7 @@ export default {
         getEvents (e) {
             axios.get('https://altunagarden.se/wordpress/wp-json/wp/v2/posts')
             .then((res) => {
-                console.log(res.data)
+                //console.log(res.data)
                 this.events = res.data
             }).catch(err => console.log(err))
         },  
@@ -44,5 +44,20 @@ export default {
 <style scoped>
 .flex.text-body-1 >>> a {
     color: rgb(165, 92, 27);
+}
+.v-card {
+    border: 3px solid;
+    padding: 10px;
+    border-image-source: linear-gradient(45deg, #000000,#a55c1b);
+    border-image-slice: 1;
+}
+.text-caption {
+    color: #b3b3b3;
+}
+.text-body-1 {
+  font-size: clamp(.8rem, 2vw, 1rem) !important;
+}
+.text-h6 {
+    font-size: clamp(1rem, 2vw, 1.25rem) !important;    
 }
 </style>

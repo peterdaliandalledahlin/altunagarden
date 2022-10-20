@@ -61,10 +61,10 @@
                     :disabled="invalid"
                      @click.prevent="submit"
                 >
-                    submit
+                    skicka
                 </v-btn>
                 <v-btn @click="clear">
-                    clear
+                    rensa
                 </v-btn>
             </form>
         </validation-observer>
@@ -80,7 +80,7 @@
                 v-bind="attrs"
                 @click="snackbar = false"
                 >
-                Close
+                Stäng
                 </v-btn>
             </template>
         </v-snackbar>
