@@ -189,7 +189,7 @@ export default {
                 message: this.message
             })
             .then((response) => {
-                console.log(response)
+                //console.log(response)
                 if(response.status === 200){
                     this.clear()
                     this.snackbar = true

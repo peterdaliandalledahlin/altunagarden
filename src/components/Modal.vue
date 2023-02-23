@@ -3,6 +3,7 @@
       v-model="dialog"
       scrollable
       max-width="300px"
+      v-click-outside="setLocalStorageValue"
     >
       <!-- <template v-slot:activator="{ on, attrs }">
         <v-btn
@@ -38,7 +39,7 @@
           <v-btn
             color="#a55c1b"
             text
-            @click="dialog = false"
+            @click="dialog = false, setLocalStorageValue()"
           >
             Stäng
           </v-btn>
@@ -53,6 +54,11 @@ export default {
         return {
             dialog: true,
         }
+    },
+    methods: {
+      setLocalStorageValue() {
+        localStorage.setItem('showModal',true)
+      }
     }
 }
 </script>

@@ -96,7 +96,7 @@
     >
       <v-icon>mdi-chevron-up</v-icon>
     </v-btn>
-    <Modal />
+    <Modal v-if="modal" />
     <Calendar ref="childComponent" />
   </v-app>
 </template>
@@ -146,6 +146,7 @@ import Calendar from './components/Calendar.vue'
       return {
         fab: false,
         drawer: null,
+        modal: null,
         items: [
           { title: 'Hem', icon: 'mdi-home', link: '#home' },
           { title: 'Boka', icon: 'mdi-calendar-range', link: '#book' },
@@ -162,6 +163,9 @@ import Calendar from './components/Calendar.vue'
         ],
       } 
     },
+    beforeMount: function () { 
+      this.checkLocalstorageForModal()
+    },
     methods: {
       onScroll (e) {
         if (typeof window === 'undefined') return
@@ -172,8 +176,17 @@ import Calendar from './components/Calendar.vue'
         this.$vuetify.goTo(0)
       },
       click: function() {
-        this.$refs.childComponent.setValue();
-    }
+        this.$refs.childComponent.setValue()
+      },
+      checkLocalstorageForModal () {
+        //if(localStorage.getItem("showModal") === null)
+        //return false
+        if ("showModal" in localStorage) {
+          this.modal = false
+        } else {
+          this.modal = true
+        }
+      }
       // toggleTheme() {
       //   this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
       // }
