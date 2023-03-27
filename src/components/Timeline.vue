@@ -38,14 +38,29 @@ export default {
             years: [
               {
                 color: '#a55c1b',
+                year: '2023',
+                content: 'Årsmöte tillsammans med Dragmansbosjöns Våtmarkmarksförening och Altuna Hembygdsförening med val av nya styrelsemedlemmar.'
+              },
+              {
+                color: '#a55c1b',
+                year: '2023',
+                content: 'Julgransplundring i januari'
+              },
+              {
+                color: '#a55c1b',
+                year: '2022',
+                content: 'Dans till Nikitas i oktober'
+              },
+              {
+                color: '#a55c1b',
                 year: '2022',
                 content: 'Utställning med foton John Alinder. Pubkvällar. Uppdatering av webbsidan, ny layout.'
-                },
+              },
               {
                 color: '#a55c1b',
                 year: '2021',
                 content: 'Luciatåg. Ny webbsida presenteras. Pubkvällar'
-                },
+              },
               {
                 color: '#a55c1b',
                 year: '2020',

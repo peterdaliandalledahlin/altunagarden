@@ -23,16 +23,15 @@
             En mötesplats för alla.
           </h2>
           <!-- <div class="mx-auto"> -->
-            <v-btn @click="$vuetify.goTo('#book',  {duration: 500, easing: 'easeInOutCubic'})" color="black" max-width="200" id="opacity-btn-1" class="mb-2">
+            <v-btn @click="$vuetify.goTo('#book',  {duration: 500, easing: 'easeInOutCubic'})" color="black" max-width="200" id="opacity-btn-1" class="mr-3">
               Boka bygdegården
             </v-btn>
-            <!-- <v-btn @click="$vuetify.goTo('#events', {duration: 500, easing: 'easeInOutCubic'})" color="black" max-width="200" id="opacity-btn-1">
+            <v-btn @click="$vuetify.goTo('#events', {duration: 500, easing: 'easeInOutCubic'})" color="black" max-width="200" id="opacity-btn-1">
               Till evenemangen
-            </v-btn> -->
+            </v-btn>
           <!-- </div> -->
         </v-col>
       </v-row>
-      <!-- <v-overlay :value="overlay"></v-overlay> -->
     </v-parallax>
 </template>
 

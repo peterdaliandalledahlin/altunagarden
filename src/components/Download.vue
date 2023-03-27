@@ -18,10 +18,7 @@
               </v-list-item-content>
             </v-list-item>
           </v-list-item-group>
-        </v-list> 
-
-        <!-- <a href="./dagordningarsmote2021.pdf" target="_blank">Dagordning årsmöte 2021</a> -->
-    
+        </v-list>    
     
   </v-container>
 </template>

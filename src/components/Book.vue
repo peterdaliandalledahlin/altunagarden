@@ -10,7 +10,7 @@
             >
             mdi-calendar-range
             </v-icon>
-            Telefonnummer till lokalbokningen: <a :class="{'card-link white--text' : $vuetify.theme.dark, 'black--text' : $vuetify.theme.light}" href="tel:0736260079">073-626 00 79</a> (Lisa svarar)
+            Telefonnummer till lokalbokningen: <a :class="{'card-link white--text' : $vuetify.theme.dark, 'black--text' : $vuetify.theme.light}" href="tel:+46734655533">073-465 55 33</a> (Malin Örde svarar)
         </v-banner>
         <v-banner
             two-line
@@ -21,7 +21,7 @@
             >
             mdi-email
             </v-icon>
-                Vill du hellre skicka en förfrågan via e-post så är adressen <a :class="{'card-link white--text' : $vuetify.theme.dark, 'black--text' : $vuetify.theme.light}" href="mailto:lisa@ekehult.se">lisa@ekehult.se</a>
+                Vill du hellre skicka en förfrågan via e-post så är adressen <a :class="{'card-link white--text' : $vuetify.theme.dark, 'black--text' : $vuetify.theme.light}" href="mailto:malinorde@gmail.com">malinorde@gmail.com</a>
         </v-banner>
         <v-banner
             two-line

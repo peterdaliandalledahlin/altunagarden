@@ -9,6 +9,7 @@
                             <v-flex class="mb-2 text-h6">{{ event.title.rendered }}</v-flex>
                             <v-flex class="mb-2 text-caption">Upplagd: {{ event.date.slice(0,event.date.length-9) }}</v-flex>
                             <v-flex class="text-body-1" v-html="event.content.rendered"></v-flex>
+                            <!--<v-flex class="text-body-1">{{ event.content.rendered | stripHTML }}</v-flex>-->
                         </v-layout>
                     </v-container>
                 </v-card>  
